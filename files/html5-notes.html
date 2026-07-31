@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML5 Notes — CodeForge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <style>
+    .notes{max-width:900px;margin:0 auto;padding:44px 20px 70px}.notes section{margin-top:30px}.notes h2{font-size:1.3rem}.notes h3{font-size:1rem;margin-top:18px}.notes li{color:var(--ink-muted);margin:6px 0}.notes pre{overflow:auto;background:#191719;color:#f7f3f4;padding:18px;border-radius:12px;font: .84rem/1.55 var(--font-mono)}.notes code{font-family:var(--font-mono)}.notes p code,.notes li code{background:var(--red-soft);color:var(--red-dark);padding:1px 4px;border-radius:4px}.notes .intro{font-size:1.04rem}
+  </style>
+</head>
+<body>
+  <main class="notes">
+    <a href="courses.html" class="btn btn-outline btn-sm">← Back to courses</a>
+    <header class="page-head" style="margin-top:28px">
+      <span class="eyebrow">HTML5 · STUDY NOTES</span>
+      <h1>HTML5 Notes</h1>
+      <p class="intro">HTML5 (HyperText Markup Language version 5) is the latest standard language used to create web pages and web applications. It gives a webpage its basic structure through elements called tags.</p>
+      <p>HTML is not a programming language; it is a markup language used to organize and display text, images, videos, links, tables, and forms.</p>
+      <button class="btn btn-primary" data-complete-course="html5">Mark HTML5 notes complete</button>
+    </header>
+
+    <section class="card p-card"><h2>Features of HTML5</h2><ul><li>Simple, clean syntax and semantic elements</li><li>Audio, video, canvas, and SVG support</li><li>Local Storage, Geolocation, Drag and Drop, Web Workers, and WebSockets</li><li>Responsive design support and better form validation</li></ul></section>
+
+    <section class="card p-card"><h2>Basic HTML structure</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></section>
+
+    <section class="card p-card"><h2>Tags, elements, and attributes</h2><p>Tags tell the browser what to display. An element has an opening tag, content, and a closing tag.</p><pre><code>&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;p&gt;Hello Students&lt;/p&gt;
+&lt;a href="https://google.com"&gt;Google&lt;/a&gt;
+&lt;img src="image.jpg" alt="Image"&gt;</code></pre><h3>Common attributes</h3><p><code>id</code>, <code>class</code>, <code>href</code>, <code>src</code>, <code>alt</code>, <code>style</code>, <code>title</code>, and <code>target</code>.</p></section>
+
+    <section class="card p-card"><h2>Text content</h2><h3>Headings and paragraph</h3><pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Heading&lt;/h2&gt;
+&lt;h6&gt;Heading&lt;/h6&gt;
+&lt;p&gt;This is paragraph.&lt;/p&gt;</code></pre><h3>Text formatting</h3><pre><code>&lt;b&gt;Bold&lt;/b&gt;        &lt;strong&gt;Important&lt;/strong&gt;
+&lt;i&gt;Italic&lt;/i&gt;      &lt;em&gt;Emphasis&lt;/em&gt;
+&lt;u&gt;Underline&lt;/u&gt;   &lt;mark&gt;Highlight&lt;/mark&gt;
+&lt;small&gt;Small Text&lt;/small&gt;  &lt;del&gt;Deleted&lt;/del&gt;
+&lt;ins&gt;Inserted&lt;/ins&gt;  &lt;sub&gt;Subscript&lt;/sub&gt;  &lt;sup&gt;Superscript&lt;/sup&gt;</code></pre></section>
+
+    <section class="card p-card"><h2>Lists, links, images, and tables</h2><pre><code>&lt;ol&gt;&lt;li&gt;HTML&lt;/li&gt;&lt;li&gt;CSS&lt;/li&gt;&lt;/ol&gt;
+&lt;ul&gt;&lt;li&gt;HTML&lt;/li&gt;&lt;li&gt;CSS&lt;/li&gt;&lt;/ul&gt;
+&lt;dl&gt;&lt;dt&gt;HTML&lt;/dt&gt;&lt;dd&gt;Markup Language&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;a href="https://google.com" target="_blank"&gt;Google&lt;/a&gt;
+&lt;img src="photo.jpg" alt="Nature" width="300"&gt;
+
+&lt;table border="1"&gt;
+  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Ramesh&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></section>
+
+    <section class="card p-card"><h2>Forms and input types</h2><pre><code>&lt;form&gt;
+  &lt;input type="text"&gt;
+  &lt;input type="email"&gt;
+  &lt;input type="password"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;</code></pre><p>Input types include: text, password, email, number, date, time, color, range, radio, checkbox, file, submit, reset, and button.</p><pre><code>&lt;button&gt;Click Me&lt;/button&gt;</code></pre></section>
+
+    <section class="card p-card"><h2>Div, span, and semantic tags</h2><p>A <code>div</code> is a block-level container. A <code>span</code> is an inline container.</p><pre><code>&lt;div&gt;&lt;h2&gt;Title&lt;/h2&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Hello &lt;span&gt;World&lt;/span&gt;&lt;/p&gt;
+
+&lt;header&gt;&lt;nav&gt;Navigation&lt;/nav&gt;&lt;/header&gt;
+&lt;main&gt;&lt;section&gt;&lt;h2&gt;HTML Tutorial&lt;/h2&gt;&lt;/section&gt;&lt;/main&gt;
+&lt;footer&gt;Copyright 2026&lt;/footer&gt;</code></pre><p>Important semantic tags: <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>aside</code>, and <code>footer</code>.</p></section>
+
+    <section class="card p-card"><h2>Media, iframe, entities, comments, and meta tags</h2><pre><code>&lt;audio controls&gt;&lt;source src="song.mp3"&gt;&lt;/audio&gt;
+&lt;video controls width="500"&gt;&lt;source src="video.mp4"&gt;&lt;/video&gt;
+&lt;iframe src="https://example.com" width="500" height="300"&gt;&lt;/iframe&gt;
+
+&lt;!-- This is a comment --&gt;
+&amp;lt;  &amp;gt;  &amp;amp;  &amp;nbsp;  &amp;copy;  &amp;reg;
+
+&lt;meta name="description" content="HTML Notes"&gt;
+&lt;meta name="keywords" content="HTML,CSS,JavaScript"&gt;</code></pre></section>
+
+    <section class="card p-card"><h2>HTML5 APIs and Local Storage</h2><p>HTML5 APIs include Geolocation, Drag and Drop, Local Storage, Session Storage, Web Workers, Canvas, and WebSockets.</p><pre><code>localStorage.setItem("name", "Ramesh");
+let user = localStorage.getItem("name");
+localStorage.removeItem("name");</code></pre></section>
+
+    <section class="card p-card"><h2>Best practices</h2><ul><li>Use semantic HTML and lowercase tag names.</li><li>Always add meaningful <code>alt</code> text to images.</li><li>Indent code properly and close every tag.</li><li>Organize content with headings and meaningful classes and IDs.</li><li>Keep HTML, CSS, and JavaScript in separate files.</li><li>Use the viewport meta tag, make pages responsive, and validate HTML.</li></ul></section>
+
+    <section class="card p-card"><h2>HTML5 interview questions</h2><ul><li>What is HTML5, and how is it different from HTML?</li><li>What are semantic tags? What is the difference between <code>div</code> and <code>span</code>?</li><li>What is the purpose of DOCTYPE and meta tags?</li><li>Explain Local Storage and Session Storage.</li><li>What are the new input types in HTML5?</li><li>What is the difference between <code>strong</code> and <code>b</code>, and <code>em</code> and <code>i</code>?</li><li>What is the <code>canvas</code> element used for?</li><li>How do you embed audio and video, and why is <code>alt</code> important?</li></ul></section>
+  </main>
+  <script src="js/storage.js"></script>
+  <script src="js/course-progress.js"></script>
+</body>
+</html>

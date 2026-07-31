@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript ES6+ Notes — CodeForge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <style>
+    .notes{max-width:900px;margin:0 auto;padding:44px 20px 70px}.notes section{margin-top:30px}.notes h2{font-size:1.3rem}.notes h3{font-size:1rem;margin-top:18px}.notes li{color:var(--ink-muted);margin:6px 0}.notes pre{overflow:auto;background:#191719;color:#f7f3f4;padding:18px;border-radius:12px;font: .84rem/1.55 var(--font-mono)}.notes code{font-family:var(--font-mono)}.notes p code,.notes li code{background:var(--red-soft);color:var(--red-dark);padding:1px 4px;border-radius:4px}.notes .intro{font-size:1.04rem}
+  </style>
+</head>
+<body>
+  <main class="notes">
+    <a href="courses.html" class="btn btn-outline btn-sm">← Back to courses</a>
+    <header class="page-head" style="margin-top:28px"><span class="eyebrow">JAVASCRIPT · ES6+ NOTES</span><h1>JavaScript (ES6+) Notes</h1><p class="intro">JavaScript (JS) is a high-level, interpreted programming language used to make web pages interactive and dynamic. It works with HTML for structure and CSS for style.</p><button class="btn btn-primary" data-complete-course="javascript">Mark JavaScript notes complete</button></header>
+
+    <section class="card p-card"><h2>Why learn JavaScript?</h2><ul><li>Adds interactivity and dynamic content to web pages.</li><li>Handles user events and communicates with servers through APIs.</li><li>Builds web, mobile, and desktop apps; it is essential for frontend and backend development.</li></ul><h3>Features</h3><p>Lightweight, object-oriented, event-driven, interpreted, cross-platform, dynamically typed, asynchronous, functional-programming support, and a huge npm ecosystem.</p></section>
+
+    <section class="card p-card"><h2>How to add JavaScript and comments</h2><pre><code>&lt;!-- Inline --&gt;
+&lt;button onclick="alert('Hello')"&gt;Click&lt;/button&gt;
+
+&lt;!-- Internal --&gt;
+&lt;script&gt;
+  console.log("Hello");
+&lt;/script&gt;
+
+&lt;!-- External --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+// Single-line comment
+/* Multi-line
+   comment */</code></pre></section>
+
+    <section class="card p-card"><h2>Variables, data types, and operators</h2><pre><code>var name = "Ramesh";
+let age = 20;
+const PI = 3.14;
+
+let userName = "John";   // String
+let userAge = 21;         // Number
+let isStudent = true;     // Boolean
+let salary = null;        // Null
+let city;                 // Undefined
+// Other primitives: BigInt and Symbol
+
+// Arithmetic: + - * / % **
+// Assignment: = += -= *= /= 
+// Comparison: == === != !== &gt; &lt; &gt;= &lt;=
+// Logical: &amp;&amp; || !</code></pre></section>
+
+    <section class="card p-card"><h2>Input, output, conversion, and templates</h2><pre><code>alert("Hello");
+console.log("Welcome");
+let name = prompt("Enter Name");
+document.write(name);
+
+Number("10");
+String(100);
+Boolean(1);
+
+let student = "Ramesh";
+console.log(`Welcome ${student}`);</code></pre></section>
+
+    <section class="card p-card"><h2>Conditions and loops</h2><pre><code>if (age &gt;= 18) {
+  console.log("Adult");
+} else if (age &gt;= 13) {
+  console.log("Teen");
+} else {
+  console.log("Child");
+}
+
+switch (day) {
+  case 1: console.log("Monday"); break;
+  case 2: console.log("Tuesday"); break;
+  default: console.log("Invalid");
+}
+
+for (let i = 1; i &lt;= 5; i++) console.log(i);
+while (i &lt;= 5) { console.log(i); i++; }
+do { console.log(i); i++; } while (i &lt;= 5);
+for (const value of [10, 20, 30]) console.log(value);
+for (const key in { name: "John", age: 20 }) console.log(key);</code></pre></section>
+
+    <section class="card p-card"><h2>Functions, arrays, and objects</h2><pre><code>function greet() { console.log("Hello"); }
+function add(a, b) { return a + b; }
+const multiply = (a, b) =&gt; a * b;
+
+let fruits = ["Apple", "Banana", "Mango"];
+// push, pop, shift, unshift, splice, slice, concat, includes,
+// indexOf, reverse, sort, join, map, filter, reduce, find, forEach
+
+let student = { name: "Ramesh", age: 20, city: "Jaipur" };
+console.log(student.name);</code></pre><p>Useful string methods: <code>length</code>, <code>toUpperCase()</code>, <code>toLowerCase()</code>, <code>trim()</code>, <code>includes()</code>, <code>slice()</code>, <code>substring()</code>, <code>replace()</code>, <code>split()</code>, and <code>charAt()</code>. Math methods include <code>random()</code>, <code>floor()</code>, <code>ceil()</code>, <code>round()</code>, <code>max()</code>, <code>min()</code>, <code>pow()</code>, and <code>sqrt()</code>.</p></section>
+
+    <section class="card p-card"><h2>Date and the DOM</h2><pre><code>let today = new Date();
+
+document.getElementById();
+document.getElementsByClassName();
+document.getElementsByTagName();
+document.querySelector();
+document.querySelectorAll();
+
+document.getElementById("demo").innerHTML = "Hello";
+document.getElementById("demo").style.color = "red";
+
+let p = document.createElement("p");
+p.innerText = "Hello";
+document.body.appendChild(p);</code></pre><p>The DOM (Document Object Model) lets JavaScript access and modify HTML elements.</p></section>
+
+    <section class="card p-card"><h2>Events, timers, JSON, and storage</h2><p>Common events: <code>click</code>, <code>dblclick</code>, <code>mouseover</code>, <code>mouseout</code>, <code>keydown</code>, <code>keyup</code>, <code>submit</code>, <code>change</code>, <code>input</code>, and <code>load</code>.</p><pre><code>button.addEventListener("click", () =&gt; alert("Clicked"));
+setTimeout(() =&gt; console.log("Hello"), 2000);
+setInterval(() =&gt; console.log("Running"), 1000);
+
+let json = JSON.stringify({ name: "John" });
+let obj = JSON.parse(json);
+
+localStorage.setItem("name", "Ramesh");
+localStorage.getItem("name");
+localStorage.removeItem("name");
+localStorage.clear();
+sessionStorage.setItem("theme", "dark");</code></pre></section>
+
+    <section class="card p-card"><h2>ES6+ features</h2><pre><code>const person = { name: "John", age: 20 };
+const { name, age } = person;              // destructuring
+
+const arr = [1, 2];
+const newArr = [...arr, 3, 4];             // spread
+function sum(...numbers) { console.log(numbers); } // rest
+function greet(name = "Guest") { console.log(name); } // default parameter
+
+const promise = new Promise((resolve, reject) =&gt; resolve("Success"));
+promise.then(result =&gt; console.log(result));
+
+async function getData() {
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+}</code></pre></section>
+
+    <section class="card p-card"><h2>Fetch, errors, and modules</h2><pre><code>fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data));
+
+try {
+  console.log(a);
+} catch (error) {
+  console.log(error);
+}
+
+export default add;
+import add from "./script.js";</code></pre></section>
+
+    <section class="card p-card"><h2>Best practices</h2><ul><li>Prefer <code>let</code> and <code>const</code> over <code>var</code>.</li><li>Use meaningful names, small focused functions, and avoid globals.</li><li>Use strict equality (<code>===</code>), validate input, and handle errors with <code>try...catch</code>.</li><li>Use modules and <code>addEventListener()</code>; comment only when necessary.</li></ul></section>
+
+    <section class="card p-card"><h2>Interview questions and learning roadmap</h2><h3>Interview questions</h3><ul><li>What are the differences between <code>var</code>, <code>let</code>, and <code>const</code>, and between <code>==</code> and <code>===</code>?</li><li>Explain closures, hoisting, the DOM, events, event bubbling/capturing, and the event loop.</li><li>What are promises, async/await, callbacks, and higher-order functions?</li><li>What is the difference between null and undefined, localStorage and sessionStorage, synchronous and asynchronous code?</li></ul><h3>Roadmap</h3><p>JavaScript basics → variables and data types → operators and conditions → loops → functions → arrays and objects → DOM → events → ES6+ → JSON → storage → Fetch/AJAX → promises → async/await → error handling → modules → mini projects → object-oriented JavaScript → closures, event loop, prototypes, and memory management.</p></section>
+  </main>
+  <script src="js/storage.js"></script>
+  <script src="js/course-progress.js"></script>
+</body>
+</html>

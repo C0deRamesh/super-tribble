@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery — CodeForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/sidebar.css" />
+<link rel="stylesheet" href="css/components.css" />
+<script src="js/storage.js"></script>
+<script src="js/auth-guard.js"></script>
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="sidebar-overlay" data-sidebar-overlay></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <div class="mark"><svg viewBox="0 0 24 24" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div>
+        <div class="name">CodeForge</div>
+        <div class="tag">learning portal</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-label">Menu</div>
+      <a href="index.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg>
+        Home
+      </a>
+      <a href="courses.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Courses
+      </a>
+      <a href="gallery.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        Gallery
+      </a>
+      <a href="about.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        About
+      </a>
+      <a href="contact.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+        Contact
+      </a>
+      <div class="nav-label">Account</div>
+      <a href="dashboard.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+    </nav>
+    <div class="sidebar-user" data-sidebar-user></div>
+  </aside>
+
+  <div class="topbar">
+    <a href="index.html" class="brand-mini">
+      <span class="mark"><svg viewBox="0 0 24 24" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+      CodeForge
+    </a>
+    <button class="menu-btn" data-menu-btn aria-label="Open menu">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="page-head">
+        <span class="eyebrow">◆ learning lab</span>
+        <h1>Useful resources and projects to build.</h1>
+        <p class="lede">Read the notes, follow the practice plan, then ship a small project. Every completed project updates your dashboard.</p>
+      </div>
+
+      <div class="grid-3 resource-grid">
+        <article class="card p-card resource-card"><span class="tag">STUDY NOTES</span><h3>HTML5 foundations</h3><p>Learn structure, semantic tags, forms, media, APIs, and best practices before starting your first web page.</p><a class="btn btn-outline btn-sm" href="html5-notes.html">Open HTML5 notes</a></article>
+        <article class="card p-card resource-card"><span class="tag">STUDY NOTES</span><h3>CSS3 layout toolkit</h3><p>Use the CSS notes for Flexbox, Grid, responsive design, animations, and a cleaner layout system.</p><a class="btn btn-outline btn-sm" href="css3-notes.html">Open CSS3 notes</a></article>
+        <article class="card p-card resource-card"><span class="tag">STUDY NOTES</span><h3>JavaScript ES6+</h3><p>Practice variables, functions, DOM, events, storage, promises, Fetch, and modern JavaScript patterns.</p><a class="btn btn-outline btn-sm" href="javascript-notes.html">Open JavaScript notes</a></article>
+        <article class="card p-card resource-card"><span class="tag">PROJECT 01</span><h3>Personal portfolio</h3><p>Build a one-page site with an introduction, skills, projects, and a contact form. Use HTML5 and CSS.</p><button class="btn btn-primary btn-sm" data-ship-project="Personal portfolio">Mark as shipped</button></article>
+        <article class="card p-card resource-card"><span class="tag">PROJECT 02</span><h3>To-do list</h3><p>Create tasks, mark them complete, filter the list, and save the data using local storage.</p><button class="btn btn-primary btn-sm" data-ship-project="To-do list">Mark as shipped</button></article>
+        <article class="card p-card resource-card"><span class="tag">PROJECT 03</span><h3>Responsive landing page</h3><p>Build a mobile-first product page using Flexbox, Grid, media queries, and a call-to-action button.</p><button class="btn btn-primary btn-sm" data-ship-project="Responsive landing page">Mark as shipped</button></article>
+      </div>
+       <section>
+        <div class="section-head">
+          <span class="eyebrow">◆ learning roadmap</span>
+          <h2>Learn web development the simple way.</h2>
+          <p>Study for 60–90 minutes a day. Read the notes, type every example yourself, then build the small task before moving on.</p>
+        </div>
+        
+        <div class="roadmap-list">
+          <div class="card p-card roadmap-step"><span class="tag">WEEK 1</span><h3>Start with HTML5</h3><p>Learn page structure, headings, links, images, lists, forms, and semantic tags. Spend 45 minutes learning and 30 minutes building a profile page each day.</p></div>
+          <div class="card p-card roadmap-step"><span class="tag">WEEK 2–3</span><h3>Make it beautiful with CSS</h3><p>Practice selectors, box model, Flexbox, Grid, and responsive design. Rebuild the same profile page for mobile and desktop.</p></div>
+          <div class="card p-card roadmap-step"><span class="tag">WEEK 4–5</span><h3>Add JavaScript</h3><p>Learn variables, conditions, functions, arrays, DOM, and events. Build a calculator or to-do list while writing the code yourself.</p></div>
+          <div class="card p-card roadmap-step"><span class="tag">WEEK 6</span><h3>Build and share</h3><p>Combine HTML, CSS, and JavaScript into one small project. Test it on phone and desktop, fix issues, then add it to your portfolio.</p></div>
+          <div class="card p-card roadmap-step roadmap-soon"><span class="tag">NEXT STEP</span><h3>More roadmaps coming soon</h3><p>Advanced JavaScript, backend, data, and interview-preparation paths will be added here.</p></div>
+        </div>
+      </section>
+
+      <div class="page-footer">
+        <span>© 2026 CodeForge. All rights reserved.</span>
+        <span>Built with HTML, CSS, JS &amp; Local Storage.</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

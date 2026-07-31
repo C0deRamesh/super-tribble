@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — CodeForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/sidebar.css" />
+<link rel="stylesheet" href="css/components.css" />
+<script src="js/storage.js"></script>
+<script src="js/auth-guard.js"></script>
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="sidebar-overlay" data-sidebar-overlay></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <div class="mark"><svg viewBox="0 0 24 24" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div>
+        <div class="name">CodeForge</div>
+        <div class="tag">learning portal</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-label">Menu</div>
+      <a href="index.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg>
+        Home
+      </a>
+      <a href="courses.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Courses
+      </a>
+      <a href="gallery.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        Gallery
+      </a>
+      <a href="about.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        About
+      </a>
+      <a href="contact.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+        Contact
+      </a>
+      <div class="nav-label">Account</div>
+      <a href="dashboard.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+    </nav>
+    <div class="sidebar-user" data-sidebar-user></div>
+  </aside>
+
+  <div class="topbar">
+    <a href="index.html" class="brand-mini">
+      <span class="mark"><svg viewBox="0 0 24 24" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+      CodeForge
+    </a>
+    <button class="menu-btn" data-menu-btn aria-label="Open menu">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="page-head">
+        <span class="eyebrow">◆ get in touch</span>
+        <h1>Questions, feedback, partnership ideas?</h1>
+        <p class="lede">Send us a message — it's saved right to your browser's local storage and our team follows up from there.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="card p-card">
+            <div class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3>Studio</h3>
+            <p>Jaipur, Rajasthan, India — remote-first team, open to visitors by appointment.</p>
+          </div>
+          <div class="card p-card">
+            <div class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+            <h3>Email</h3>
+            <p>hello@codeforge.example</p>
+          </div>
+          <div class="card p-card">
+            <div class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3>Response time</h3>
+            <p>We reply within one business day, faster for current students.</p>
+          </div>
+        </div>
+
+        <div class="card p-card">
+          <div class="form-msg" data-form-msg></div>
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="c-name">Full name</label>
+              <div class="input-wrap">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input type="text" id="c-name" name="name" placeholder="Jordan Smith" />
+              </div>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="c-email">Email address</label>
+              <div class="input-wrap">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                <input type="email" id="c-email" name="email" placeholder="you@example.com" />
+              </div>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="c-message">Message</label>
+              <div class="input-wrap">
+                <svg class="icon" viewBox="0 0 24 24" style="top:18px; transform:none;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <textarea id="c-message" name="message" rows="5" placeholder="How can we help?" style="padding-left:42px;"></textarea>
+              </div>
+              <span class="field-error"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send message</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>© 2026 CodeForge. All rights reserved.</span>
+        <span>Built with HTML, CSS, JS &amp; Local Storage.</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

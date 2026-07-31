@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Register — CodeForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+<style>
+  body{ background:linear-gradient(160deg, var(--red-soft) 0%, var(--bg) 40%); }
+  .back-home{ position:fixed; top:24px; left:24px; display:flex; align-items:center; gap:9px; font-family:var(--font-display); font-weight:700; }
+  .back-home .mark{ width:32px; height:32px; border-radius:9px; background:linear-gradient(135deg,var(--red),var(--red-darker)); display:flex; align-items:center; justify-content:center; }
+  .back-home .mark svg{ width:16px; height:16px; stroke:#fff; }
+</style>
+<script src="js/storage.js"></script>
+</head>
+<body>
+
+<a href="index.html" class="back-home">
+  <span class="mark"><svg viewBox="0 0 24 24" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+  CodeForge
+</a>
+
+<div class="form-shell">
+  <div class="card form-card">
+    <div class="form-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+    <h1>Create your account</h1>
+    <p class="sub">Registration takes less than a minute — then you're straight into the dashboard.</p>
+
+    <div class="form-msg" data-form-msg></div>
+
+    <form id="register-form" novalidate>
+      <div class="field">
+        <label for="name">Full name</label>
+        <div class="input-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <input type="text" id="name" name="name" placeholder="Jordan Smith" autocomplete="name" />
+        </div>
+        <span class="field-error"></span>
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <div class="input-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <span class="field-error"></span>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <input type="password" id="password" name="password" placeholder="At least 8 characters" autocomplete="new-password" style="padding-right:42px;" />
+          <button type="button" class="toggle-pw" data-toggle-pw="password" aria-label="Show password">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <div class="pw-strength"><div class="pw-strength-bar" data-pw-strength></div></div>
+        <span class="field-error"></span>
+      </div>
+      <div class="field">
+        <label for="confirm">Confirm password</label>
+        <div class="input-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" autocomplete="new-password" style="padding-right:42px;" />
+          <button type="button" class="toggle-pw" data-toggle-pw="confirm" aria-label="Show password">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <span class="field-error"></span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+    </form>
+
+    <p class="form-switch">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+</div>
+
+<script src="js/register.js"></script>
+</body>
+</html>

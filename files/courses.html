@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Courses — CodeForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/sidebar.css" />
+<link rel="stylesheet" href="css/components.css" />
+<script src="js/storage.js"></script>
+<script src="js/auth-guard.js"></script>
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="sidebar-overlay" data-sidebar-overlay></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <div class="mark"><svg viewBox="0 0 24 24" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div>
+        <div class="name">CodeForge</div>
+        <div class="tag">learning portal</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-label">Menu</div>
+      <a href="index.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg>
+        Home
+      </a>
+      <a href="courses.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Courses
+      </a>
+      <a href="gallery.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        Gallery
+      </a>
+      <a href="about.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        About
+      </a>
+      <a href="contact.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+        Contact
+      </a>
+      <div class="nav-label">Account</div>
+      <a href="dashboard.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+    </nav>
+    <div class="sidebar-user" data-sidebar-user></div>
+  </aside>
+
+  <div class="topbar">
+    <a href="index.html" class="brand-mini">
+      <span class="mark"><svg viewBox="0 0 24 24" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+      CodeForge
+    </a>
+    <button class="menu-btn" data-menu-btn aria-label="Open menu">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="page-head">
+        <span class="eyebrow">◆ 3 courses available</span>
+        <h1>Pick a track. Ship every module.</h1>
+        <p class="lede">Filter by language or focus area. Every course below includes hands-on projects, not just lecture videos.</p>
+      </div>
+
+      <div class="chip-row" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="web">Web</button>
+        <button class="chip" data-filter="python">Python</button>
+        <button class="chip" data-filter="data">DSA</button>
+        <button class="chip" data-filter="mobile">Mobile</button>
+        <button class="chip" data-filter="backend">Backend</button>
+      </div>
+
+      <div class="grid-3" id="course-grid">
+        <div class="card p-card" data-cat="web">
+          <span class="tag">WEB</span>
+          <h3><a class="course-title-link" href="html5-notes.html">HTML5</a></h3>
+          <p>Learn the semantic and accessible structure behind every website.</p>
+          <div class="meta"><span>🧩 8 modules</span><span>⏱ 10h</span><span>🟢 Beginner</span></div>
+          <a href="html5-notes.html" class="btn btn-primary btn-sm course-start">Read full HTML5 notes</a>
+        </div>
+        <div class="card p-card" data-cat="web">
+          <span class="tag">WEB</span>
+          <h3><a class="course-title-link" href="javascript-notes.html">Modern JavaScript</a></h3>
+          <p>ES2024 syntax, async patterns, and the DOM APIs used across production codebases.</p>
+          <div class="meta"><span>🧩 14 modules</span><span>⏱ 22h</span><span>🟢 Beginner</span></div>
+          <a href="javascript-notes.html" class="btn btn-primary btn-sm course-start">Read full JavaScript notes</a>
+        </div>
+        <div class="card p-card" data-cat="web">
+          <span class="tag">WEB</span>
+          <h3><a class="course-title-link" href="css3-notes.html">Responsive CSS &amp; Layout</a></h3>
+          <p>Flexbox, Grid, container queries, and building interfaces that hold up on any screen.</p>
+          <div class="meta"><span>🧩 9 modules</span><span>⏱ 14h</span><span>🟢 Beginner</span></div>
+          <a href="css3-notes.html" class="btn btn-primary btn-sm course-start">Read full CSS3 notes</a>
+        </div>
+        <div class="card p-card" data-cat="python">
+          <span class="tag">PYTHON</span>
+          <h3>Python Fundamentals</h3>
+          <p>Syntax, data structures, and functions — the foundation for every Python track after this.</p>
+          <div class="meta"><span>🧩 10 modules</span><span>⏱ 16h</span><span>🟢 Beginner</span></div>
+          <button type="button" class="btn btn-outline btn-sm course-start" disabled>Coming soon</button>
+        </div>
+        <div class="card p-card" data-cat="data">
+          <span class="tag">DSA</span>
+          <h3>Data Structures and Algorithms</h3>
+          <p>Master concepts like arrays, strings, linked list, stack, queue, greedy, backtracking, trees, graph, DP and more.</p>
+          <div class="meta"><span>🧩 12 modules</span><span>⏱ 3m</span><span>🟡 Intermediate</span></div>
+          <button type="button" class="btn btn-outline btn-sm course-start" disabled>Coming soon</button>
+        </div>
+        <div class="card p-card" data-cat="backend">
+          <span class="tag">BACKEND</span>
+          <h3>Full-Stack Fundamentals</h3>
+          <p>REST APIs, authentication, and relational data modeling for real applications.</p>
+          <div class="meta"><span>🧩 16 modules</span><span>⏱ 27h</span><span>🟡 Intermediate</span></div>
+          <button type="button" class="btn btn-outline btn-sm course-start" disabled>Coming soon</button>
+        </div>
+        <div class="card p-card" data-cat="mobile">
+          <span class="tag">MOBILE</span>
+          <h3>Mobile Basics with React Native</h3>
+          <p>Ship your first cross-platform app using the JavaScript skills you already have.</p>
+          <div class="meta"><span>🧩 11 modules</span><span>⏱ 18h</span><span>🟡 Intermediate</span></div>
+          <button type="button" class="btn btn-outline btn-sm course-start" disabled>Coming soon</button>
+        </div>
+       
+       
+      </div>
+
+      <div class="page-footer">
+        <span>© 2026 CodeForge. All rights reserved.</span>
+        <span>Built with HTML, CSS, JS &amp; Local Storage.</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/courses.js"></script>
+</body>
+</html>
