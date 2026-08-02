@@ -43,3 +43,7 @@ npx serve .
 ├── html5-notes.html / css3-notes.html / javascript-notes.html
 ├── css/                   Stylesheets
 └── js/                    Client-side logic (auth, storage, progress)
+```
+## web link
+
+https://c0deramesh.github.io/super-tribble/files/login.html?redirect=index.html
